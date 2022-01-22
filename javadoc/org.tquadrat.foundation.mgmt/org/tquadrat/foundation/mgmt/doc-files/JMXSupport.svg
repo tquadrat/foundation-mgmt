@@ -1,0 +1,507 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:svg="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     version='1.1'
+     baseProfile='full'
+     width='1518.000'
+     height='1341.000'>
+    <defs>
+        <style><![CDATA[
+            line
+            {
+              stroke: black;
+            }
+            line.separator
+            {
+              stroke:       black;
+              stroke-width: 1;
+            }
+            marker
+            {
+              fill: white;
+            }
+            path
+            {
+              fill:   white;
+              stroke: black;
+            }
+            path.implementation
+            {
+              fill:             none;
+              stroke-dasharray: 5,5;
+              stroke-width:     3;
+            }
+            path.inheritance
+            {
+              fill:         none;
+              stroke-width: 3;
+            }
+            rect
+            {
+              fill:         none;
+              stroke:       black;
+              stroke-width: 2;
+            }
+            rect.externalClass
+            {
+              fill:         #D0D0D0;
+              fill-opacity: 0.8;
+            }
+            rect.focusClass
+            {
+              fill:         #FFFFF9;
+              fill-opacity: 0.8;
+            }
+            rect.otherClass
+            {
+              fill:         #F0E68C;
+              fill-opacity: 0.8;
+            }
+            rect.template
+            {
+              fill:             #FFFFFF;
+              fill-opacity:     1.0;
+              stroke-dasharray: 3,3;
+            }
+            text
+            {
+              font-family: monospace;
+              font-size:   10px;
+              font-weight: bold;
+            }
+            text.abstract
+            {
+              font-style: italic;
+            }
+            text.final
+            {
+              text-decoration: underline;
+            }
+            text.static
+            {
+              font-weight: normal;
+            }
+            text.stereotype
+            {
+              font-size:   8px;
+              font-weight: normal;
+            }
+            ]]></style>
+        <marker id='inheritance'
+                viewBox='0,0,40,40'
+                markerUnits='strokeWidth'
+                refX='40'
+                refY='20'
+                markerWidth='6'
+                markerHeight='6'
+                orient='auto'>
+            <path d='M40,20 l-40,-20 v40 Z'
+                  fill='#ffffff'
+                  stroke='#000000'
+                  stroke-width='3'/>
+        </marker>
+        <marker id='implementation'
+                viewBox='0,0,40,40'
+                markerUnits='strokeWidth'
+                refX='40'
+                refY='20'
+                markerWidth='6'
+                markerHeight='6'
+                orient='auto'>
+            <path d='M40,20 l-40,-20 v40 Z'
+                  fill='#ffffff'
+                  stroke='#000000'
+                  stroke-width='3'/>
+        </marker>
+        <clipPath id='ID000001'>
+            <rect class='focusClass'
+                  height='139.000'
+                  width='916.000'
+                  x='0.000'
+                  y='8.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.mgmt.JMXSupport'>
+            <g>
+                <g class='focusClass'
+                   clip-path='url(#ID000001)'>
+                    <rect x='0.000'
+                          y='8.000'
+                          width='916.000'
+                          height='139.000'
+                          class='focusClass'/>
+                    <line x1='0.000'
+                          y1='36.000'
+                          x2='916.000'
+                          y2='36.000'
+                          class='separator'/>
+                    <text x='431.600'
+                          y='21.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='428.000'
+                          y='32.000'
+                          class='abstract'>JMXSupport</text>
+                    <line x1='0.000'
+                          y1='53.000'
+                          x2='916.000'
+                          y2='53.000'
+                          class='separator'/>
+                    <text x='5.000'
+                          y='49.000'/>
+                    <text x='5.000'
+                          y='66.000'
+                          class='abstract'>+ getNextNotificationSequenceNumber():long</text>
+                    <text x='5.000'
+                          y='77.000'
+                          class='abstract'>+ getObject():T</text>
+                    <text x='5.000'
+                          y='88.000'
+                          class='abstract'>+ getObjectDescription():java.lang.String</text>
+                    <text x='5.000'
+                          y='99.000'
+                          class='abstract'>+ getObjectName():javax.management.ObjectName</text>
+                    <text x='5.000'
+                          y='110.000'
+                          class='abstract static'>+ register(object:O,objectName:javax.management.ObjectName,threadFactory:java.util.concurrent.ThreadFactory):org.tquadrat.foundation.mgmt.JMXSupport&lt;O&gt;</text>
+                    <text x='5.000'
+                          y='121.000'
+                          class='abstract'>+ sendAttributeChangeNotification(message:java.lang.String,description:java.lang.String,attributeType:java.lang.Class&lt;A&gt;,oldValue:V,newValue:V):void</text>
+                    <text x='5.000'
+                          y='132.000'
+                          class='abstract'>+ sendNotification(type:java.lang.String,message:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='143.000'
+                          class='abstract'>+ unregister():void</text>
+                </g>
+                <g transform='translate(891.000 0.000)'>
+                    <rect x='0.000'
+                          y='1.000'
+                          width='50.000'
+                          height='17.000'
+                          class='template'/>
+                    <rect x='0.000'
+                          y='1.000'
+                          width='50.000'
+                          height='17.000'
+                          class='focusClass'
+                          stroke='none'
+                          stroke-opacity='0.0'/>
+                    <text x='5.000'
+                          y='14.000'>T</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000002'>
+            <rect class='otherClass'
+                  height='557.000'
+                  width='982.000'
+                  x='0.000'
+                  y='8.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.foundation.mgmt.internal.JMXSupportImpl'>
+            <g>
+                <g clip-path='url(#ID000002)'>
+                    <rect x='0.000'
+                          y='8.000'
+                          width='982.000'
+                          height='557.000'
+                          class='otherClass'/>
+                    <line x1='0.000'
+                          y1='25.000'
+                          x2='982.000'
+                          y2='25.000'
+                          class='separator'/>
+                    <text x='449.000'
+                          y='21.000'>JMXSupportImpl</text>
+                    <line x1='0.000'
+                          y1='251.000'
+                          x2='982.000'
+                          y2='251.000'
+                          class='separator'/>
+                    <text y='38.000'
+                          class='static final'>+ MSG_ActionNotFound:java.lang.String</text>
+                    <text y='49.000'
+                          class='static final'>+ MSG_AttributeNotFound:java.lang.String</text>
+                    <text y='60.000'
+                          class='static final'>+ MSG_InvalidAttributeValue:java.lang.String</text>
+                    <text y='71.000'
+                          class='static final'>+ MSG_InvocationDenied:java.lang.String</text>
+                    <text y='82.000'
+                          class='static final'>+ MSG_InvocationException:java.lang.String</text>
+                    <text y='93.000'
+                          class='static final'>+ MSG_InvocationProblems:java.lang.String</text>
+                    <text y='104.000'
+                          class='static final'>+ MSG_NoManagedObject:java.lang.String</text>
+                    <text y='115.000'
+                          class='static final'>+ MSG_NoProperties:java.lang.String</text>
+                    <text y='126.000'
+                          class='static final'>+ MSG_SetterDenied:java.lang.String</text>
+                    <text y='137.000'
+                          class='static final'>+ MSG_SetterException:java.lang.String</text>
+                    <text y='148.000'
+                          class='static final'>+ MSG_SetterProblems:java.lang.String</text>
+                    <text y='159.000'>- m_BroadcasterSupport:java.util.Optional&lt;javax.management.NotificationBroadcasterSupport&gt;</text>
+                    <text y='170.000'
+                          class='final'>- m_MBeanActions:java.util.Map&lt;java.lang.String,java.lang.reflect.Method&gt;</text>
+                    <text y='181.000'
+                          class='final'>- m_MBeanGetters:java.util.Map&lt;java.lang.String,java.lang.reflect.Method&gt;</text>
+                    <text y='192.000'
+                          class='final'>- m_MBeanInfo:org.tquadrat.foundation.lang.Lazy&lt;javax.management.MBeanInfo&gt;</text>
+                    <text y='203.000'
+                          class='final'>- m_MBeanSetters:java.util.Map&lt;java.lang.String,java.lang.reflect.Method&gt;</text>
+                    <text y='214.000'
+                          class='final'>- m_Object:T</text>
+                    <text y='225.000'
+                          class='final'>- m_ObjectDescription:java.lang.String</text>
+                    <text y='236.000'
+                          class='final'>- m_ObjectName:javax.management.ObjectName</text>
+                    <text y='247.000'
+                          class='final'>- m_Sequence:java.util.concurrent.atomic.AtomicLong</text>
+                    <text x='5.000'
+                          y='264.000'>- JMXSupportImpl(object:T,name:javax.management.ObjectName,description:java.lang.String,useNotifications:boolean,threadFactory:java.util.concurrent.ThreadFactory)</text>
+                    <text x='5.000'
+                          y='275.000'>+ addNotificationListener(listener:javax.management.NotificationListener,filter:javax.management.NotificationFilter,handback:java.lang.Object):void</text>
+                    <text x='5.000'
+                          y='286.000'>- createActionInfo():javax.management.MBeanOperationInfo[]</text>
+                    <text x='5.000'
+                          y='297.000'>- createAttributeInfo():javax.management.MBeanAttributeInfo[]</text>
+                    <text x='5.000'
+                          y='308.000'>- createMBeanInfo():javax.management.MBeanInfo</text>
+                    <text x='5.000'
+                          y='319.000'
+                          class='static'>- createNotificationInfo(notification:org.tquadrat.foundation.mgmt.MBeanNotification):javax.management.MBeanNotificationInfo</text>
+                    <text x='5.000'
+                          y='330.000'>- createNotificationInfo(object:java.lang.Object):javax.management.MBeanNotificationInfo[]</text>
+                    <text x='5.000'
+                          y='341.000'
+                          class='static'>- determineSignature(method:java.lang.reflect.Method):javax.management.MBeanParameterInfo[]</text>
+                    <text x='5.000'
+                          y='352.000'>+ getAttribute(attributeName:java.lang.String):java.lang.Object</text>
+                    <text x='5.000'
+                          y='363.000'>+ getAttributes(attributes:java.lang.String[]):javax.management.AttributeList</text>
+                    <text x='5.000'
+                          y='374.000'>+ getMBeanInfo():javax.management.MBeanInfo</text>
+                    <text x='5.000'
+                          y='385.000'>+ getNextNotificationSequenceNumber():long</text>
+                    <text x='5.000'
+                          y='396.000'>+ getNotificationInfo():javax.management.MBeanNotificationInfo[]</text>
+                    <text x='5.000'
+                          y='407.000'>+ getObject():T</text>
+                    <text x='5.000'
+                          y='418.000'>+ getObjectDescription():java.lang.String</text>
+                    <text x='5.000'
+                          y='429.000'>+ getObjectName():javax.management.ObjectName</text>
+                    <text x='5.000'
+                          y='440.000'>+ invoke(actionName:java.lang.String,params:java.lang.Object[],signature:java.lang.String[]):java.lang.Object</text>
+                    <text x='5.000'
+                          y='451.000'>+ removeNotificationListener(listener:javax.management.NotificationListener):void</text>
+                    <text x='5.000'
+                          y='462.000'>+ removeNotificationListener(listener:javax.management.NotificationListener,filter:javax.management.NotificationFilter,handback:java.lang.Object):void</text>
+                    <text x='5.000'
+                          y='473.000'
+                          class='static'>+ register(object:O,objectName:javax.management.ObjectName,threadFactory:java.util.concurrent.ThreadFactory):org.tquadrat.foundation.mgmt.JMXSupport&lt;O&gt;</text>
+                    <text x='5.000'
+                          y='484.000'
+                          class='static'>- registerMBean(mbean:javax.management.DynamicMBean,objectName:javax.management.ObjectName):void</text>
+                    <text x='5.000'
+                          y='495.000'>- retrieveNextNotificationSequenceNumber():long</text>
+                    <text x='5.000'
+                          y='506.000'>+ sendAttributeChangeNotification(message:java.lang.String,description:java.lang.String,attributeType:java.lang.Class&lt;A&gt;,oldValue:V,newValue:V):void</text>
+                    <text x='5.000'
+                          y='517.000'>- sendNotification(notification:javax.management.Notification):void</text>
+                    <text x='5.000'
+                          y='528.000'>+ sendNotification(type:java.lang.String,message:java.lang.String):void</text>
+                    <text x='5.000'
+                          y='539.000'>+ setAttribute(attribute:javax.management.Attribute):void</text>
+                    <text x='5.000'
+                          y='550.000'>+ setAttributes(attributes:javax.management.AttributeList):javax.management.AttributeList</text>
+                    <text x='5.000'
+                          y='561.000'>+ unregister():void</text>
+                </g>
+                <g transform='translate(957.000 0.000)'>
+                    <rect x='0.000'
+                          y='1.000'
+                          width='50.000'
+                          height='17.000'
+                          class='template'/>
+                    <rect x='0.000'
+                          y='1.000'
+                          width='50.000'
+                          height='17.000'
+                          class='otherClass'
+                          stroke='none'
+                          stroke-opacity='0.0'/>
+                    <text x='5.000'
+                          y='14.000'>T</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000003'>
+            <rect class='externalClass'
+                  height='117.000'
+                  width='586.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='javax.management.DynamicMBean'>
+            <g>
+                <g clip-path='url(#ID000003)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='586.000'
+                          height='117.000'
+                          class='externalClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='586.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='266.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='257.000'
+                          y='24.000'
+                          class='abstract'>DynamicMBean</text>
+                    <line x1='0.000'
+                          y1='45.000'
+                          x2='586.000'
+                          y2='45.000'
+                          class='separator'/>
+                    <text x='5.000'
+                          y='41.000'/>
+                    <text x='5.000'
+                          y='58.000'
+                          class='abstract'>+ getAttribute(arg0:java.lang.String):java.lang.Object</text>
+                    <text x='5.000'
+                          y='69.000'
+                          class='abstract'>+ setAttribute(arg0:javax.management.Attribute):void</text>
+                    <text x='5.000'
+                          y='80.000'
+                          class='abstract'>+ getAttributes(arg0:java.lang.String[]):javax.management.AttributeList</text>
+                    <text x='5.000'
+                          y='91.000'
+                          class='abstract'>+ setAttributes(arg0:javax.management.AttributeList):javax.management.AttributeList</text>
+                    <text x='5.000'
+                          y='102.000'
+                          class='abstract'>+ invoke(arg0:java.lang.String,arg1:java.lang.Object[],arg2:java.lang.String[]):java.lang.Object</text>
+                    <text x='5.000'
+                          y='113.000'
+                          class='abstract'>+ getMBeanInfo():javax.management.MBeanInfo</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000004'>
+            <rect class='externalClass'
+                  height='62.000'
+                  width='850.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='javax.management.NotificationEmitter'>
+            <g>
+                <g clip-path='url(#ID000004)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='850.000'
+                          height='62.000'
+                          class='externalClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='850.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='398.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='368.000'
+                          y='24.000'
+                          class='abstract'>NotificationEmitter</text>
+                    <line x1='0.000'
+                          y1='45.000'
+                          x2='850.000'
+                          y2='45.000'
+                          class='separator'/>
+                    <text x='5.000'
+                          y='41.000'/>
+                    <text x='5.000'
+                          y='58.000'
+                          class='abstract'>+ removeNotificationListener(arg0:javax.management.NotificationListener,arg1:javax.management.NotificationFilter,arg2:java.lang.Object):void</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000005'>
+            <rect class='externalClass'
+                  height='84.000'
+                  width='832.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='javax.management.NotificationBroadcaster'>
+            <g>
+                <g clip-path='url(#ID000005)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='832.000'
+                          height='84.000'
+                          class='externalClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='832.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='389.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='347.000'
+                          y='24.000'
+                          class='abstract'>NotificationBroadcaster</text>
+                    <line x1='0.000'
+                          y1='45.000'
+                          x2='832.000'
+                          y2='45.000'
+                          class='separator'/>
+                    <text x='5.000'
+                          y='41.000'/>
+                    <text x='5.000'
+                          y='58.000'
+                          class='abstract'>+ addNotificationListener(arg0:javax.management.NotificationListener,arg1:javax.management.NotificationFilter,arg2:java.lang.Object):void</text>
+                    <text x='5.000'
+                          y='69.000'
+                          class='abstract'>+ removeNotificationListener(arg0:javax.management.NotificationListener):void</text>
+                    <text x='5.000'
+                          y='80.000'
+                          class='abstract'>+ getNotificationInfo():javax.management.MBeanNotificationInfo[]</text>
+                </g>
+            </g>
+        </symbol>
+    </defs>
+    <path class='implementation'
+          d='M746.500,659.000 L746.500,551.000'
+          marker-end='url(#implementation)'/>
+    <path class='inheritance'
+          d='M721.500,412.000 c0.000,-255.000,-403.500,0.000,-403.500,-255.000 v-15'
+          marker-end='url(#inheritance)'/>
+    <path class='inheritance'
+          d='M771.500,412.000 c0.000,-93.000,-12.500,0.000,-12.500,-93.000 v-15'
+          marker-end='url(#inheritance)'/>
+    <path class='inheritance'
+          d='M759.000,242.000 c0.000,-118.000,318.000,0.000,318.000,-118.000 v-15'
+          marker-end='url(#inheritance)'/>
+    <use x='25.000'
+         y='25.000'
+         xlink:href='#javax.management.DynamicMBean'/>
+    <use x='661.000'
+         y='25.000'
+         xlink:href='#javax.management.NotificationBroadcaster'/>
+    <use x='334.000'
+         y='242.000'
+         xlink:href='#javax.management.NotificationEmitter'/>
+    <use x='288.500'
+         y='404.000'
+         xlink:href='#org.tquadrat.foundation.mgmt.JMXSupport'/>
+    <use x='255.500'
+         y='651.000'
+         xlink:href='#org.tquadrat.foundation.mgmt.internal.JMXSupportImpl'/>
+</svg>

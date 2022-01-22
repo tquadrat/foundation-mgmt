@@ -1,0 +1,38 @@
+<html>
+<!--
+  ~ ============================================================================
+  ~  Copyright © 2002-2022 by Thomas Thrien.
+  ~  All Rights Reserved.
+  ~ ============================================================================
+  ~  Licensed to the public under the agreements of the GNU Lesser General Public
+  ~  License, version 3.0 (the "License"). You may obtain a copy of the License at
+  ~
+  ~       http://www.gnu.org/licenses/lgpl.html
+  ~
+  ~  Unless required by applicable law or agreed to in writing, software
+  ~  distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+  ~  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+  ~  License for the specific language governing permissions and limitations
+  ~  under the License.
+  -->
+
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <p>The Java Management Extension (JMX) allows monitoring and control an
+    already running program, locally or remote. The runtime environment
+    provides already several so-called <i>platform MXBeans</i> (for
+    &quot;managed bean&quot;), covering some general topics, like garbage
+    collection or logging. These can be found in the package
+    {@link java.lang.management}.</p>
+    <p>But to make specific features of a program accessible via JMX, it is
+    necessary to provide own MBeans; this can be done by implementing the
+    interface
+    {@link javax.management.DynamicMBean}.</p>
+    <p>This is what the class
+    {@link org.tquadrat.foundation.mgmt.JMXSupport}
+    does: it is a generic implementation of the {@code DynamicMBean} interface
+    that links the program code to JMX.</p>
+</body>
+</html>
