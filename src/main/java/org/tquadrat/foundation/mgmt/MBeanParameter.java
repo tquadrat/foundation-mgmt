@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2020 by Thomas Thrien.
+ * Copyright © 2002-2022 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -15,7 +15,7 @@
  * under the License.
  */
 
-package org.tquadrat.foundation.management;
+package org.tquadrat.foundation.mgmt;
 
 import static org.apiguardian.api.API.Status.STABLE;
 
@@ -31,13 +31,11 @@ import org.tquadrat.foundation.annotation.ClassVersion;
 
 /**
  *  This annotation will be used to provide information about the parameters
- *  of an action or constructor for a MBean implementation.
+ *  of an action or constructor for an MBean implementation.
  *
- *  @author Thomas Thrien - thomas.thrien@tquadrat.org
+ *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  *  @version $Id: MBeanParameter.java 634 2020-02-04 08:30:44Z tquadrat $
  *  @since 0.0.1
- *
- *  @UMLGraph.link
  */
 @ClassVersion( sourceVersion = "$Id: MBeanParameter.java 634 2020-02-04 08:30:44Z tquadrat $" )
 @API( status = STABLE, since = "0.0.1" )

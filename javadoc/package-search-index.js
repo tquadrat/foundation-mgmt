@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"org.tquadrat.foundation.mgmt","l":"org.tquadrat.foundation.management"},{"m":"org.tquadrat.foundation.mgmt","l":"org.tquadrat.foundation.mgmt"},{"m":"org.tquadrat.foundation.mgmt","l":"org.tquadrat.foundation.mgmt.internal"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"org.tquadrat.foundation.mgmt","l":"org.tquadrat.foundation.mgmt"},{"m":"org.tquadrat.foundation.mgmt","l":"org.tquadrat.foundation.mgmt.internal"}];updateSearchResults();

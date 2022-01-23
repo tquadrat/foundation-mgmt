@@ -74,6 +74,7 @@ import org.tquadrat.foundation.mgmt.MBeanAction;
 import org.tquadrat.foundation.mgmt.MBeanGetter;
 import org.tquadrat.foundation.mgmt.MBeanNotification;
 import org.tquadrat.foundation.mgmt.MBeanNotifications;
+import org.tquadrat.foundation.mgmt.MBeanParameter;
 import org.tquadrat.foundation.mgmt.MBeanSetter;
 import org.tquadrat.foundation.mgmt.ManagedObject;
 import org.tquadrat.foundation.stream.MapStream;
@@ -527,7 +528,6 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
             String description;
             if( allAnnotations.length > 0 )
             {
-                org.tquadrat.foundation.management.MBeanParameter parameterAnnotation;
                 for( var i = 0; i < parameterTypes.length; ++i )
                 {
                     //---* Collect the values *--------------------------------
@@ -537,9 +537,8 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
                     for( final var annotation : allAnnotations [i] )
                     {
                         //---* Is it the right annotation type? *--------------
-                        if( annotation instanceof org.tquadrat.foundation.management.MBeanParameter )
+                        if( annotation instanceof MBeanParameter parameterAnnotation )
                         {
-                            parameterAnnotation = (org.tquadrat.foundation.management.MBeanParameter) annotation;
                             name = parameterAnnotation.name();
                             description = parameterAnnotation.description();
                             break;

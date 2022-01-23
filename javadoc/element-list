@@ -1,4 +1,3 @@
 module:org.tquadrat.foundation.mgmt
-org.tquadrat.foundation.management
 org.tquadrat.foundation.mgmt
 org.tquadrat.foundation.mgmt.internal
