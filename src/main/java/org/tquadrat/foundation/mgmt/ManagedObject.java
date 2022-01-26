@@ -17,7 +17,7 @@
 
 package org.tquadrat.foundation.mgmt;
 
-import static org.apiguardian.api.API.Status.*;
+import static org.apiguardian.api.API.Status.STABLE;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -35,10 +35,10 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  {@link JMXSupport}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: ManagedObject.java 634 2020-02-04 08:30:44Z tquadrat $
+ *  @version $Id: ManagedObject.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.0.1
  */
-@ClassVersion( sourceVersion = "$Id: ManagedObject.java 634 2020-02-04 08:30:44Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: ManagedObject.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.0.1" )
 @Documented
 @Retention( RetentionPolicy.RUNTIME )

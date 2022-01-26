@@ -37,7 +37,7 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  this method is sending the notification.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: MBeanNotification.java 634 2020-02-04 08:30:44Z tquadrat $
+ *  @version $Id: MBeanNotification.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.0.1
  *
  *  @UMLGraph.link
@@ -48,7 +48,7 @@ import org.tquadrat.foundation.annotation.ClassVersion;
 @Retention( RetentionPolicy.RUNTIME )
 @Target( {ElementType.TYPE, ElementType.METHOD} )
 @Inherited
-@ClassVersion( sourceVersion = "$Id: MBeanNotification.java 634 2020-02-04 08:30:44Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: MBeanNotification.java 995 2022-01-23 01:09:35Z tquadrat $" )
 public @interface MBeanNotification
 {
         /*------------*\

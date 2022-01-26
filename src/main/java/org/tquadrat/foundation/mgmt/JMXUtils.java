@@ -43,13 +43,13 @@ import org.tquadrat.foundation.lang.NameValuePair;
  *  This class provides some utilities that are useful in the context of JMX.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: JMXUtils.java 665 2020-03-03 23:24:45Z tquadrat $
+ *  @version $Id: JMXUtils.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.0.1
  *
  *  @UMLGraph.link
  */
 @UtilityClass
-@ClassVersion( sourceVersion = "$Id: JMXUtils.java 665 2020-03-03 23:24:45Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: JMXUtils.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.0.1" )
 public final class JMXUtils
 {

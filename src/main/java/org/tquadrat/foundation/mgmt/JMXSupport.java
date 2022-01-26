@@ -46,12 +46,12 @@ import org.tquadrat.foundation.mgmt.internal.JMXSupportImpl;
  *  @see org.tquadrat.foundation.mgmt.MBeanSetter
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: MBeanSupport.java 635 2020-02-04 12:08:02Z tquadrat $
+ *  @version $Id: JMXSupport.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.0.1
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: MBeanSupport.java 635 2020-02-04 12:08:02Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: JMXSupport.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.0.1" )
 public sealed interface JMXSupport<T> extends DynamicMBean, NotificationEmitter
     permits org.tquadrat.foundation.mgmt.internal.JMXSupportImpl

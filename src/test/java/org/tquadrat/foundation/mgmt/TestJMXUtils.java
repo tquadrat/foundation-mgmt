@@ -38,10 +38,10 @@ import org.tquadrat.foundation.testutil.TestBaseClass;
  *  Some tests for the class
  *  {@link JMXUtils}.
  *
- *  @version $Id: MBeanSetter.java 634 2020-02-04 08:30:44Z tquadrat $
+ *  @version $Id: TestJMXUtils.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  */
-@ClassVersion( sourceVersion = "$Id: HexUtils.java 747 2020-12-01 12:40:38Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TestJMXUtils.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 @DisplayName( "org.tquadrat.foundation.mgmt.TestJMXUtils" )
 public class TestJMXUtils extends TestBaseClass

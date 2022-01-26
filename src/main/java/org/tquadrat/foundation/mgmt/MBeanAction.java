@@ -35,10 +35,10 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  an MBean implementation.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: MBeanAction.java 634 2020-02-04 08:30:44Z tquadrat $
+ *  @version $Id: MBeanAction.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.0.1
  */
-@ClassVersion( sourceVersion = "$Id: MBeanAction.java 634 2020-02-04 08:30:44Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: MBeanAction.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = STABLE, since = "0.0.1" )
 @Documented
 @Retention( RetentionPolicy.RUNTIME )

@@ -96,13 +96,13 @@ import org.tquadrat.foundation.stream.MapStream;
  *  @see MBeanSetter
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: JMXSupportImpl.java 682 2020-03-21 19:20:31Z tquadrat $
+ *  @version $Id: JMXSupportImpl.java 995 2022-01-23 01:09:35Z tquadrat $
  *  @since 0.0.1
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( "OverlyComplexClass" )
-@ClassVersion( sourceVersion = "$Id: JMXSupportImpl.java 682 2020-03-21 19:20:31Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: JMXSupportImpl.java 995 2022-01-23 01:09:35Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.1" )
 public final class JMXSupportImpl<T> implements JMXSupport<T>
 {

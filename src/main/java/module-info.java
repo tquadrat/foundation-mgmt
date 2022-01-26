@@ -19,7 +19,7 @@
 /**
  *  The module for the JMX extensions by the <i>Foundation</i> Library.
  *
- *  @version $Id: module-info.java 990 2022-01-14 23:34:24Z tquadrat $
+ *  @version $Id: module-info.java 995 2022-01-23 01:09:35Z tquadrat $
  *
  *  @todo task.list
  */
