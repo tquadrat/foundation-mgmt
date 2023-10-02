@@ -131,7 +131,7 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/DynamicMBean.html" title="class or interface in javax.management" class="external-link">DynamicMBean</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationBroadcaster.html" title="class or interface in javax.management" class="external-link">NotificationBroadcaster</a></code>, <code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationEmitter.html" title="class or interface in javax.management" class="external-link">NotificationEmitter</a></code>, <code><a href="../JMXSupport.html" title="interface in org.tquadrat.foundation.mgmt">JMXSupport</a>&lt;T&gt;</code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="annotations"><a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/ClassVersion.html" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">@ClassVersion</a>(<a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/ClassVersion.html#sourceVersion()" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">sourceVersion</a>="$Id: JMXSupportImpl.java 995 2022-01-23 01:09:35Z tquadrat $")
+<div class="type-signature"><span class="annotations"><a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/ClassVersion.html" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">@ClassVersion</a>(<a href="https://tquadrat.github.io/foundation-base/javadoc/org.tquadrat.foundation.base/org/tquadrat/foundation/annotation/ClassVersion.html#sourceVersion()" title="class or interface in org.tquadrat.foundation.annotation" class="external-link">sourceVersion</a>="$Id: JMXSupportImpl.java 1070 2023-09-29 17:09:34Z tquadrat $")
 <a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.html" title="class or interface in org.apiguardian.api" class="external-link">@API</a>(<a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.html#status()" title="class or interface in org.apiguardian.api" class="external-link">status</a>=<a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.Status.html#INTERNAL" title="class or interface in org.apiguardian.api" class="external-link">INTERNAL</a>,
      <a href="https://apiguardian-team.github.io/apiguardian/docs/current/api/org/apiguardian/api/API.html#since()" title="class or interface in org.apiguardian.api" class="external-link">since</a>="0.0.1")
 </span><span class="modifiers">public final class </span><span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-104">JMXSupportImpl</a>&lt;T&gt;</span>
@@ -146,7 +146,7 @@ implements <a href="../JMXSupport.html" title="interface in org.tquadrat.foundat
 <dt><span class="simpleTagLabel">Author:</span></dt>
   <dd>Thomas Thrien (<a href="mailto:thomas.thrien@tquadrat.org">thomas.thrien@tquadrat.org</a>)</dd>
 <dt>Version:</dt>
-<dd>$Id: JMXSupportImpl.java 995 2022-01-23 01:09:35Z tquadrat $</dd>
+<dd>$Id: JMXSupportImpl.java 1070 2023-09-29 17:09:34Z tquadrat $</dd>
 <dt>Since:</dt>
 <dd>0.0.1</dd>
 <dt>See Also:</dt>
@@ -255,7 +255,7 @@ implements <a href="../JMXSupport.html" title="interface in org.tquadrat.foundat
 <div class="col-first odd-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#MSG_InvalidAttributeValue" class="member-name-link">MSG_InvalidAttributeValue</a></code></div>
 <div class="col-last odd-row-color">
-<div class="block">Message: "The value \'%s$s\' is invalid for the MBean attribute with the name \'%1$s\'".</div>
+<div class="block">Message: "The value \'%2$s\' is invalid for the MBean attribute with the name \'%1$s\'".</div>
 </div>
 <div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#MSG_InvocationDenied" class="member-name-link">MSG_InvocationDenied</a></code></div>
@@ -523,7 +523,7 @@ V extends A&gt;<br>void</code></div>
 <section class="detail" id="MSG_InvalidAttributeValue">
 <h3>MSG_InvalidAttributeValue</h3>
 <div class="member-signature"><span class="modifiers">public static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-125">MSG_InvalidAttributeValue</a></span></div>
-<div class="block">Message: "The value \'%s$s\' is invalid for the MBean attribute with the name \'%1$s\'".</div>
+<div class="block">Message: "The value \'%2$s\' is invalid for the MBean attribute with the name \'%1$s\'".</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -771,7 +771,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="addNotificationListener(javax.management.NotificationListener,javax.management.NotificationFilter,java.lang.Object)">
 <h3>addNotificationListener</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-314">addNotificationListener</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationListener.html" title="class or interface in javax.management" class="external-link">NotificationListener</a>&nbsp;listener,
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-315">addNotificationListener</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationListener.html" title="class or interface in javax.management" class="external-link">NotificationListener</a>&nbsp;listener,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationFilter.html" title="class or interface in javax.management" class="external-link">NotificationFilter</a>&nbsp;filter,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;handback)</span></div>
 <dl class="notes">
@@ -783,7 +783,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="createActionInfo()">
 <h3>createActionInfo</h3>
-<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanOperationInfo.html" title="class or interface in javax.management" class="external-link">MBeanOperationInfo</a>[]</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-325">createActionInfo</a></span>()</div>
+<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanOperationInfo.html" title="class or interface in javax.management" class="external-link">MBeanOperationInfo</a>[]</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-326">createActionInfo</a></span>()</div>
 <div class="block">Creates the structure that holds the action information.</div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -794,7 +794,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="createAttributeInfo()">
 <h3>createAttributeInfo</h3>
-<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanAttributeInfo.html" title="class or interface in javax.management" class="external-link">MBeanAttributeInfo</a>[]</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-354">createAttributeInfo</a></span>()
+<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanAttributeInfo.html" title="class or interface in javax.management" class="external-link">MBeanAttributeInfo</a>[]</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-356">createAttributeInfo</a></span>()
                                                 throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/IntrospectionException.html" title="class or interface in javax.management" class="external-link">IntrospectionException</a></span></div>
 <div class="block">Creates the structure that holds the attribute information.</div>
 <dl class="notes">
@@ -809,7 +809,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="createMBeanInfo()">
 <h3>createMBeanInfo</h3>
-<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanInfo.html" title="class or interface in javax.management" class="external-link">MBeanInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-417">createMBeanInfo</a></span>()</div>
+<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanInfo.html" title="class or interface in javax.management" class="external-link">MBeanInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-420">createMBeanInfo</a></span>()</div>
 <div class="block">Creates the MBeanInfo data structure.<br>
   <br>This implementation will swallow all exceptions, an overriding
   implementation may want to log it.</div>
@@ -825,7 +825,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="createNotificationInfo(org.tquadrat.foundation.mgmt.MBeanNotification)">
 <h3>createNotificationInfo</h3>
-<div class="member-signature"><span class="modifiers">private static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanNotificationInfo.html" title="class or interface in javax.management" class="external-link">MBeanNotificationInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-444">createNotificationInfo</a></span><wbr><span class="parameters">(<a href="../MBeanNotification.html" title="annotation interface in org.tquadrat.foundation.mgmt">MBeanNotification</a>&nbsp;notification)</span></div>
+<div class="member-signature"><span class="modifiers">private static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanNotificationInfo.html" title="class or interface in javax.management" class="external-link">MBeanNotificationInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-447">createNotificationInfo</a></span><wbr><span class="parameters">(<a href="../MBeanNotification.html" title="annotation interface in org.tquadrat.foundation.mgmt">MBeanNotification</a>&nbsp;notification)</span></div>
 <div class="block">Creates a single notification info element.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -838,7 +838,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="createNotificationInfo(java.lang.Object)">
 <h3>createNotificationInfo</h3>
-<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanNotificationInfo.html" title="class or interface in javax.management" class="external-link">MBeanNotificationInfo</a>[]</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-458">createNotificationInfo</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;object)</span></div>
+<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanNotificationInfo.html" title="class or interface in javax.management" class="external-link">MBeanNotificationInfo</a>[]</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-461">createNotificationInfo</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;object)</span></div>
 <div class="block">Creates the structure that holds the notification info.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -851,7 +851,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="determineSignature(java.lang.reflect.Method)">
 <h3>determineSignature</h3>
-<div class="member-signature"><span class="modifiers">private static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanParameterInfo.html" title="class or interface in javax.management" class="external-link">MBeanParameterInfo</a>[]</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-512">determineSignature</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method)</span></div>
+<div class="member-signature"><span class="modifiers">private static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanParameterInfo.html" title="class or interface in javax.management" class="external-link">MBeanParameterInfo</a>[]</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-515">determineSignature</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/reflect/Method.html" title="class or interface in java.lang.reflect" class="external-link">Method</a>&nbsp;method)</span></div>
 <div class="block">Determines the parameter information for the given method.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -864,7 +864,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="getAttribute(java.lang.String)">
 <h3>getAttribute</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-574">getAttribute</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-577">getAttribute</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;attributeName)</span>
                           throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/AttributeNotFoundException.html" title="class or interface in javax.management" class="external-link">AttributeNotFoundException</a>,
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanException.html" title="class or interface in javax.management" class="external-link">MBeanException</a>,
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ReflectionException.html" title="class or interface in javax.management" class="external-link">ReflectionException</a></span></div>
@@ -881,7 +881,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="getAttributes(java.lang.String[])">
 <h3>getAttributes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/AttributeList.html" title="class or interface in javax.management" class="external-link">AttributeList</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-606">getAttributes</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;attributes)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/AttributeList.html" title="class or interface in javax.management" class="external-link">AttributeList</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-609">getAttributes</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;attributes)</span></div>
 <div class="block">Get the values of several attributes of the Dynamic MBean. This
   implementation will swallow all exceptions that might be thrown.</div>
 <dl class="notes">
@@ -897,7 +897,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="getMBeanInfo()">
 <h3>getMBeanInfo</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanInfo.html" title="class or interface in javax.management" class="external-link">MBeanInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-629">getMBeanInfo</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanInfo.html" title="class or interface in javax.management" class="external-link">MBeanInfo</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-632">getMBeanInfo</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/DynamicMBean.html#getMBeanInfo()" title="class or interface in javax.management" class="external-link">getMBeanInfo</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/DynamicMBean.html" title="class or interface in javax.management" class="external-link">DynamicMBean</a></code></dd>
@@ -907,7 +907,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="getNextNotificationSequenceNumber()">
 <h3>getNextNotificationSequenceNumber</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-635">getNextNotificationSequenceNumber</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-638">getNextNotificationSequenceNumber</a></span>()</div>
 <div class="block">Returns the sequence number that is used for the next notification.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -920,7 +920,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="getNotificationInfo()">
 <h3>getNotificationInfo</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanNotificationInfo.html" title="class or interface in javax.management" class="external-link">MBeanNotificationInfo</a>[]</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-641">getNotificationInfo</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanNotificationInfo.html" title="class or interface in javax.management" class="external-link">MBeanNotificationInfo</a>[]</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-644">getNotificationInfo</a></span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationBroadcaster.html#getNotificationInfo()" title="class or interface in javax.management" class="external-link">getNotificationInfo</a></code>&nbsp;in interface&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationBroadcaster.html" title="class or interface in javax.management" class="external-link">NotificationBroadcaster</a></code></dd>
@@ -930,7 +930,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="getObject()">
 <h3>getObject</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="JMXSupportImpl.html" title="type parameter in JMXSupportImpl">T</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-653">getObject</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="JMXSupportImpl.html" title="type parameter in JMXSupportImpl">T</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-656">getObject</a></span>()</div>
 <div class="block">Returns the object that is instrumented by this MBean instance.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -943,7 +943,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="getObjectDescription()">
 <h3>getObjectDescription</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-659">getObjectDescription</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-662">getObjectDescription</a></span>()</div>
 <div class="block">Returns the object description.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -956,7 +956,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="getObjectName()">
 <h3>getObjectName</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html" title="class or interface in javax.management" class="external-link">ObjectName</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-665">getObjectName</a></span>()</div>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html" title="class or interface in javax.management" class="external-link">ObjectName</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-668">getObjectName</a></span>()</div>
 <div class="block">Returns the object name for this MBean. This is a copy of that instance
   that is used during registration, not the real thing. Therefore, it
   should be only used for reference.</div>
@@ -971,7 +971,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="invoke(java.lang.String,java.lang.Object[],java.lang.String[])">
 <h3>invoke</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-687">invoke</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;actionName,
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-690">invoke</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;actionName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]&nbsp;params,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;signature)</span>
                     throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanException.html" title="class or interface in javax.management" class="external-link">MBeanException</a>,
@@ -988,7 +988,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="removeNotificationListener(javax.management.NotificationListener)">
 <h3>removeNotificationListener</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-728">removeNotificationListener</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationListener.html" title="class or interface in javax.management" class="external-link">NotificationListener</a>&nbsp;listener)</span>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-731">removeNotificationListener</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationListener.html" title="class or interface in javax.management" class="external-link">NotificationListener</a>&nbsp;listener)</span>
                                       throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ListenerNotFoundException.html" title="class or interface in javax.management" class="external-link">ListenerNotFoundException</a></span></div>
 <dl class="notes">
 <dt>Specified by:</dt>
@@ -1001,7 +1001,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="removeNotificationListener(javax.management.NotificationListener,javax.management.NotificationFilter,java.lang.Object)">
 <h3>removeNotificationListener</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-740">removeNotificationListener</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationListener.html" title="class or interface in javax.management" class="external-link">NotificationListener</a>&nbsp;listener,
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-743">removeNotificationListener</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationListener.html" title="class or interface in javax.management" class="external-link">NotificationListener</a>&nbsp;listener,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/NotificationFilter.html" title="class or interface in javax.management" class="external-link">NotificationFilter</a>&nbsp;filter,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;handback)</span>
                                       throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ListenerNotFoundException.html" title="class or interface in javax.management" class="external-link">ListenerNotFoundException</a></span></div>
@@ -1016,7 +1016,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="register(O,javax.management.ObjectName,java.util.concurrent.ThreadFactory)">
 <h3 id="register(java.lang.Object,javax.management.ObjectName,java.util.concurrent.ThreadFactory)">register</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="../JMXSupport.html" title="interface in org.tquadrat.foundation.mgmt">JMXSupport</a>&lt;O&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-767">register</a></span><wbr><span class="parameters">(O&nbsp;object,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;O&gt;</span>&nbsp;<span class="return-type"><a href="../JMXSupport.html" title="interface in org.tquadrat.foundation.mgmt">JMXSupport</a>&lt;O&gt;</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-770">register</a></span><wbr><span class="parameters">(O&nbsp;object,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html" title="class or interface in javax.management" class="external-link">ObjectName</a>&nbsp;objectName,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/concurrent/ThreadFactory.html" title="class or interface in java.util.concurrent" class="external-link">ThreadFactory</a>&nbsp;threadFactory)</span>
                                   throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/IllegalArgumentException.html" title="class or interface in java.lang" class="external-link">IllegalArgumentException</a>,
@@ -1048,7 +1048,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="registerMBean(javax.management.DynamicMBean,javax.management.ObjectName)">
 <h3>registerMBean</h3>
-<div class="member-signature"><span class="modifiers">private static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-796">registerMBean</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/DynamicMBean.html" title="class or interface in javax.management" class="external-link">DynamicMBean</a>&nbsp;mbean,
+<div class="member-signature"><span class="modifiers">private static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-799">registerMBean</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/DynamicMBean.html" title="class or interface in javax.management" class="external-link">DynamicMBean</a>&nbsp;mbean,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/ObjectName.html" title="class or interface in javax.management" class="external-link">ObjectName</a>&nbsp;objectName)</span>
                            throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/InstanceAlreadyExistsException.html" title="class or interface in javax.management" class="external-link">InstanceAlreadyExistsException</a>,
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanRegistrationException.html" title="class or interface in javax.management" class="external-link">MBeanRegistrationException</a></span></div>
@@ -1068,7 +1068,7 @@ V extends A&gt;<br>void</code></div>
 <li>
 <section class="detail" id="retrieveNextNotificationSequenceNumber()">
 <h3>retrieveNextNotificationSequenceNumber</h3>
-<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-815">retrieveNextNotificationSequenceNumber</a></span>()</div>
+<div class="member-signature"><span class="modifiers">private</span>&nbsp;<span class="return-type">long</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-818">retrieveNextNotificationSequenceNumber</a></span>()</div>
 <div class="block">Returns the notification sequence number for the current notification
   and increments the number.</div>
 <dl class="notes">
@@ -1081,7 +1081,7 @@ V extends A&gt;<br>void</code></div>
 <section class="detail" id="sendAttributeChangeNotification(java.lang.String,java.lang.String,java.lang.Class,V,V)">
 <h3 id="sendAttributeChangeNotification(java.lang.String,java.lang.String,java.lang.Class,java.lang.Object,java.lang.Object)">sendAttributeChangeNotification</h3>
 <div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="type-parameters">&lt;A,<wbr>
-V extends A&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-829">sendAttributeChangeNotification</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message,
+V extends A&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-832">sendAttributeChangeNotification</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;description,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;A&gt;&nbsp;attributeType,
  V&nbsp;oldValue,
@@ -1106,7 +1106,7 @@ V extends A&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span cla
 <li>
 <section class="detail" id="sendNotification(javax.management.Notification)">
 <h3>sendNotification</h3>
-<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-861">sendNotification</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/Notification.html" title="class or interface in javax.management" class="external-link">Notification</a>&nbsp;notification)</span></div>
+<div class="member-signature"><span class="modifiers">private final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-864">sendNotification</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/Notification.html" title="class or interface in javax.management" class="external-link">Notification</a>&nbsp;notification)</span></div>
 <div class="block"><p>Sends a notification. It is not recommended using this
   method directly as this class will provide some very helpful
   convenience methods.</p>
@@ -1131,7 +1131,7 @@ V extends A&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span cla
 <li>
 <section class="detail" id="sendNotification(java.lang.String,java.lang.String)">
 <h3>sendNotification</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-875">sendNotification</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;type,
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-878">sendNotification</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;type,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
 <div class="block">Sends a simple notification with a message text.</div>
 <dl class="notes">
@@ -1146,7 +1146,7 @@ V extends A&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span cla
 <li>
 <section class="detail" id="setAttribute(javax.management.Attribute)">
 <h3>setAttribute</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-901">setAttribute</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/Attribute.html" title="class or interface in javax.management" class="external-link">Attribute</a>&nbsp;attribute)</span>
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-904">setAttribute</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/Attribute.html" title="class or interface in javax.management" class="external-link">Attribute</a>&nbsp;attribute)</span>
                         throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/AttributeNotFoundException.html" title="class or interface in javax.management" class="external-link">AttributeNotFoundException</a>,
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/InvalidAttributeValueException.html" title="class or interface in javax.management" class="external-link">InvalidAttributeValueException</a>,
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanException.html" title="class or interface in javax.management" class="external-link">MBeanException</a>,
@@ -1182,7 +1182,7 @@ V extends A&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span cla
 <li>
 <section class="detail" id="setAttributes(javax.management.AttributeList)">
 <h3>setAttributes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/AttributeList.html" title="class or interface in javax.management" class="external-link">AttributeList</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-992">setAttributes</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/AttributeList.html" title="class or interface in javax.management" class="external-link">AttributeList</a>&nbsp;attributes)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/AttributeList.html" title="class or interface in javax.management" class="external-link">AttributeList</a></span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-996">setAttributes</a></span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/AttributeList.html" title="class or interface in javax.management" class="external-link">AttributeList</a>&nbsp;attributes)</span></div>
 <div class="block">Sets the values of several attributes of the generic MBean. This
   implementation will silently swallow any exception that might occur; an
   implementation in a subclass might want to log them.<br>
@@ -1210,7 +1210,7 @@ V extends A&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span cla
 <li>
 <section class="detail" id="unregister()">
 <h3>unregister</h3>
-<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-1023">unregister</a></span>()
+<div class="member-signature"><span class="modifiers">public final</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name"><a href="../../../../../../src-html/org.tquadrat.foundation.mgmt/org/tquadrat/foundation/mgmt/internal/JMXSupportImpl.html#line-1027">unregister</a></span>()
                       throws <span class="exceptions"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/InstanceNotFoundException.html" title="class or interface in javax.management" class="external-link">InstanceNotFoundException</a>,
 <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.management/javax/management/MBeanRegistrationException.html" title="class or interface in javax.management" class="external-link">MBeanRegistrationException</a></span></div>
 <div class="block">Unregisters the MBean from the MBeanServer.</div>

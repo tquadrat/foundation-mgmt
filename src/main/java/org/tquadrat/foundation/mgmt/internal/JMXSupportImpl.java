@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2022 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,6 +17,7 @@
 
 package org.tquadrat.foundation.mgmt.internal;
 
+import static java.lang.String.format;
 import static java.lang.System.currentTimeMillis;
 import static java.lang.management.ManagementFactory.getPlatformMBeanServer;
 import static java.util.concurrent.Executors.newSingleThreadExecutor;
@@ -25,7 +26,6 @@ import static org.tquadrat.foundation.lang.Objects.isNull;
 import static org.tquadrat.foundation.lang.Objects.nonNull;
 import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
 import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import javax.management.Attribute;
 import javax.management.AttributeChangeNotification;
@@ -96,13 +96,13 @@ import org.tquadrat.foundation.stream.MapStream;
  *  @see MBeanSetter
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: JMXSupportImpl.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: JMXSupportImpl.java 1070 2023-09-29 17:09:34Z tquadrat $
  *  @since 0.0.1
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( "OverlyComplexClass" )
-@ClassVersion( sourceVersion = "$Id: JMXSupportImpl.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: JMXSupportImpl.java 1070 2023-09-29 17:09:34Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.1" )
 public final class JMXSupportImpl<T> implements JMXSupport<T>
 {
@@ -122,7 +122,7 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
     /**
      *  Message: {@value}.
      */
-    public static final String MSG_InvalidAttributeValue = "The value '%s$s' is invalid for the MBean attribute with the name '%1$s'";
+    public static final String MSG_InvalidAttributeValue = "The value '%2$s' is invalid for the MBean attribute with the name '%1$s'";
 
     /**
      *  Message: {@value}.
@@ -241,6 +241,7 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
      *      notifications will be emitted asynchronously; can be {@code null}
      *      and will be ignored if {@code useNotifications} is {@code false}.
      */
+    @SuppressWarnings( "OverlyComplexMethod" )
     private JMXSupportImpl( final T object, final ObjectName name, final String description, final boolean useNotifications, final ThreadFactory threadFactory )
     {
         m_MBeanInfo = Lazy.use( this::createMBeanInfo );
@@ -314,7 +315,7 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
     @Override
     public final void addNotificationListener( final NotificationListener listener, final NotificationFilter filter, final Object handback )
     {
-        m_BroadcasterSupport.ifPresent( b ->b.addNotificationListener( listener, filter, handback ) );
+        m_BroadcasterSupport.ifPresent( broadcasterSupport ->broadcasterSupport.addNotificationListener( listener, filter, handback ) );
     }   //  addNotificationListener()
 
     /**
@@ -324,6 +325,7 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
      */
     private final MBeanOperationInfo [] createActionInfo()
     {
+        @SuppressWarnings( "OverlyLongLambda" )
         final var retValue = MapStream.of( m_MBeanActions )
             .map( e ->
             {
@@ -357,7 +359,8 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
         final Collection<String> processedSetters = new HashSet<>();
 
         //---* Process the getters first *-------------------------------------
-       m_MBeanGetters.forEach( (name,getter) ->
+        //noinspection OverlyLongLambda
+        m_MBeanGetters.forEach( (name,getter) ->
         {
             //---* Collect the values *----------------------------------------
             final var type = getter.getReturnType().getName();
@@ -429,7 +432,7 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
                 getNotificationInfo()             // The notifications.
            );
         }
-        catch( @SuppressWarnings( "unused" ) final IntrospectionException e ) { /* Ignored */ }
+        catch( @SuppressWarnings( "unused" ) final IntrospectionException ignored ) { /* Ignored */ }
 
         //---* Done *----------------------------------------------------------
         return retValue;
@@ -537,7 +540,7 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
                     for( final var annotation : allAnnotations [i] )
                     {
                         //---* Is it the right annotation type? *--------------
-                        if( annotation instanceof MBeanParameter parameterAnnotation )
+                        if( annotation instanceof final MBeanParameter parameterAnnotation )
                         {
                             name = parameterAnnotation.name();
                             description = parameterAnnotation.description();
@@ -616,7 +619,7 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
                 attribute = new Attribute( attributeName, getAttribute( attributeName ) );
                 retValue.add( attribute );
             }
-            catch( @SuppressWarnings( "unused" ) final AttributeNotFoundException | MBeanException | ReflectionException e ) { /* Ignored! */ }
+            catch( @SuppressWarnings( "unused" ) final AttributeNotFoundException | MBeanException | ReflectionException ignored ) { /* Ignored! */ }
         }
 
         //---* Done *----------------------------------------------------------
@@ -700,8 +703,8 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
             }
             catch( final InvocationTargetException e )
             {
-                final var t = e.getCause();
-                final var cause = t instanceof Exception ? (Exception) t : e;
+                final var throwable = e.getCause();
+                final var cause = throwable instanceof Exception ? (Exception) throwable : e;
                 throw new ReflectionException( cause, format( MSG_InvocationProblems, actionName ) );
             }
             catch( final IllegalAccessException e )
@@ -862,7 +865,7 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
     {
         if( nonNull( notification ) )
         {
-            m_BroadcasterSupport.ifPresent( n -> n.sendNotification( notification ) );
+            m_BroadcasterSupport.ifPresent( broadcasterSupport -> broadcasterSupport.sendNotification( notification ) );
         }
     }   //  sendNotification()
 
@@ -898,6 +901,7 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
      *  @see #getAttribute(String) getAttribute()
      *  @see javax.management.DynamicMBean#setAttribute(javax.management.Attribute)
      */
+    @SuppressWarnings( {"MethodWithTooExceptionsDeclared", "OverlyComplexMethod", "ExtractMethodRecommender"} )
     @Override
     public final void setAttribute( final Attribute attribute ) throws AttributeNotFoundException, InvalidAttributeValueException, MBeanException, ReflectionException
     {
@@ -1003,7 +1007,7 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
                 setAttribute( attribute );
                 retValue.add( attribute );
             }
-            catch( @SuppressWarnings( "unused" ) final AttributeNotFoundException | InvalidAttributeValueException | MBeanException | ReflectionException e )
+            catch( @SuppressWarnings( "unused" ) final AttributeNotFoundException | InvalidAttributeValueException | MBeanException | ReflectionException ignored )
             {
                 continue;
             }

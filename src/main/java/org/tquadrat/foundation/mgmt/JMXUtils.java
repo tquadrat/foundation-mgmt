@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2022 by Thomas Thrien.
+ * Copyright © 2002-2023 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -17,13 +17,13 @@
 
 package org.tquadrat.foundation.mgmt;
 
+import static java.lang.String.format;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_CHARSEQUENCE;
 import static org.tquadrat.foundation.lang.DebugOutput.ifDebug;
 import static org.tquadrat.foundation.lang.Objects.isNull;
 import static org.tquadrat.foundation.lang.Objects.nonNull;
 import static org.tquadrat.foundation.lang.Objects.requireNotEmptyArgument;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import javax.management.InstanceNotFoundException;
 import javax.management.MBeanRegistrationException;
@@ -43,13 +43,13 @@ import org.tquadrat.foundation.lang.NameValuePair;
  *  This class provides some utilities that are useful in the context of JMX.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: JMXUtils.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: JMXUtils.java 1070 2023-09-29 17:09:34Z tquadrat $
  *  @since 0.0.1
  *
  *  @UMLGraph.link
  */
 @UtilityClass
-@ClassVersion( sourceVersion = "$Id: JMXUtils.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: JMXUtils.java 1070 2023-09-29 17:09:34Z tquadrat $" )
 @API( status = STABLE, since = "0.0.1" )
 public final class JMXUtils
 {
