@@ -7,7 +7,7 @@
      version='1.1'
      baseProfile='full'
      width='1422.000'
-     height='583.000'>
+     height='660.000'>
     <defs>
         <style><![CDATA[
             line
@@ -118,7 +118,7 @@
         </marker>
         <clipPath id='ID000001'>
             <rect class='focusClass'
-                  height='161.000'
+                  height='238.000'
                   width='1372.000'
                   x='0.000'
                   y='0.000'/>
@@ -130,7 +130,7 @@
                     <rect x='0.000'
                           y='0.000'
                           width='1372.000'
-                          height='161.000'
+                          height='238.000'
                           class='focusClass'/>
                     <line x1='0.000'
                           y1='17.000'
@@ -140,37 +140,56 @@
                     <text x='662.000'
                           y='13.000'>JMXUtils</text>
                     <line x1='0.000'
-                          y1='100.000'
+                          y1='122.000'
                           x2='1372.000'
-                          y2='100.000'
+                          y2='122.000'
                           class='separator'/>
                     <text y='30.000'
-                          class='static final'>+ CONNECTOR_ADDRESS:java.lang.String</text>
+                          class='static final'>+ BIND_NAME:java.lang.String</text>
                     <text y='41.000'
-                          class='static final'>+ JMX_DOMAIN:java.lang.String</text>
+                          class='static final'>+ CONNECTOR_ADDRESS:java.lang.String</text>
                     <text y='52.000'
-                          class='static final'>+ MBEAN_CLASS:java.lang.String</text>
+                          class='static final'>+ JMX_DOMAIN:java.lang.String</text>
                     <text y='63.000'
-                          class='static final'>+ MBEAN_FUNCTION:java.lang.String</text>
+                          class='static final'>+ MBEAN_CLASS:java.lang.String</text>
                     <text y='74.000'
-                          class='static final'>+ MBEAN_LOADER:java.lang.String</text>
+                          class='static final'>+ MBEAN_FUNCTION:java.lang.String</text>
                     <text y='85.000'
-                          class='static final'>+ MBEAN_NAME:java.lang.String</text>
+                          class='static final'>+ MBEAN_LOADER:java.lang.String</text>
                     <text y='96.000'
+                          class='static final'>+ MBEAN_NAME:java.lang.String</text>
+                    <text y='107.000'
                           class='static final'>+ MBEAN_TYPE:java.lang.String</text>
+                    <text y='118.000'
+                          class='static final'>- m_ConnectorServers:java.util.Map&lt;javax.management.remote.JMXServiceURL,javax.management.remote.JMXConnectorServer&gt;</text>
                     <text x='5.000'
-                          y='113.000'>- JMXUtils()</text>
-                    <text x='5.000'
-                          y='124.000'
-                          class='static'>+ composeObjectName(domainName:java.lang.String,type:java.lang.String,function:java.lang.String,mbeanClass:java.lang.Class&lt;?&gt;,properties:org.tquadrat.foundation.lang.NameValuePair&lt;java.lang.String&gt;&#x2026;):javax.management.ObjectName</text>
-                    <text x='5.000'
-                          y='135.000'
-                          class='static'>+ composeObjectName(domainName:java.lang.String,properties:org.tquadrat.foundation.lang.NameValuePair&lt;java.lang.String&gt;&#x2026;):javax.management.ObjectName</text>
+                          y='135.000'>- JMXUtils()</text>
                     <text x='5.000'
                           y='146.000'
-                          class='static'>- toString(pair:org.tquadrat.foundation.lang.NameValuePair&lt;java.lang.String&gt;):java.lang.String</text>
+                          class='static'>+ composeObjectName(domainName:java.lang.String,type:java.lang.String,function:java.lang.String,mbeanClass:java.lang.Class&lt;?&gt;,properties:org.tquadrat.foundation.lang.NameValuePair&lt;java.lang.String&gt;&#x2026;):javax.management.ObjectName</text>
                     <text x='5.000'
                           y='157.000'
+                          class='static'>+ composeObjectName(domainName:java.lang.String,properties:org.tquadrat.foundation.lang.NameValuePair&lt;java.lang.String&gt;&#x2026;):javax.management.ObjectName</text>
+                    <text x='5.000'
+                          y='168.000'
+                          class='static'>+ disableRemoteAccess(serviceURL:javax.management.remote.JMXServiceURL):void</text>
+                    <text x='5.000'
+                          y='179.000'
+                          class='static'>- enableRemoteAccess(mbeanServer:javax.management.MBeanServer,serviceURL:javax.management.remote.JMXServiceURL,registryPortNumber:int,environment:java.util.Map&lt;java.lang.String,?&gt;):void</text>
+                    <text x='5.000'
+                          y='190.000'
+                          class='static'>+ enableRemoteAccess(mbeanServer:javax.management.MBeanServer,registryPortNumber:int,environment:java.util.Map&lt;java.lang.String,?&gt;):javax.management.remote.JMXServiceURL</text>
+                    <text x='5.000'
+                          y='201.000'
+                          class='static'>+ enableRemoteAccess(mbeanServer:javax.management.MBeanServer,hostName:java.lang.String,registryPortNumber:int,dataPortNumber:int,environment:java.util.Map&lt;java.lang.String,?&gt;):javax.management.remote.JMXServiceURL</text>
+                    <text x='5.000'
+                          y='212.000'
+                          class='static'>- startRMIRegistry(port:int):void</text>
+                    <text x='5.000'
+                          y='223.000'
+                          class='static'>- toString(pair:org.tquadrat.foundation.lang.NameValuePair&lt;java.lang.String&gt;):java.lang.String</text>
+                    <text x='5.000'
+                          y='234.000'
                           class='static'>+ unregisterQuietly(mbean:org.tquadrat.foundation.mgmt.JMXSupport&lt;?&gt;):void</text>
                 </g>
             </g>

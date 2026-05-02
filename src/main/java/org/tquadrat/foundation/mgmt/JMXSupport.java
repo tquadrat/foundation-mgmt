@@ -46,12 +46,12 @@ import org.tquadrat.foundation.mgmt.internal.JMXSupportImpl;
  *  @see org.tquadrat.foundation.mgmt.MBeanSetter
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: JMXSupport.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: JMXSupport.java 1210 2026-04-26 23:12:25Z tquadrat $
  *  @since 0.0.1
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: JMXSupport.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: JMXSupport.java 1210 2026-04-26 23:12:25Z tquadrat $" )
 @API( status = STABLE, since = "0.0.1" )
 public sealed interface JMXSupport<T> extends DynamicMBean, NotificationEmitter
     permits org.tquadrat.foundation.mgmt.internal.JMXSupportImpl
@@ -93,8 +93,8 @@ public sealed interface JMXSupport<T> extends DynamicMBean, NotificationEmitter
      *  <p>{@summary Registers the server with the JMX agent.}</p>
      *  <p>If modules are used, the registered object must be accessible for
      *  this module ({@code org.tquadrat.foundation.mgmt}). This can be
-     *  achieved easiest by opening the package with the respective class to
-     *  the management module.</p>
+     *  achieved the easiest by opening the package with the respective class
+     *  to the management module.</p>
      *
      *  @param  <O> The type of the object.
      *  @param  object  The object to register with the JMX agent.

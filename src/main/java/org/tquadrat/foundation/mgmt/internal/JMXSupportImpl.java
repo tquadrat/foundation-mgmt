@@ -1,6 +1,6 @@
 /*
  * ============================================================================
- * Copyright © 2002-2023 by Thomas Thrien.
+ * Copyright © 2002-2026 by Thomas Thrien.
  * All Rights Reserved.
  * ============================================================================
  * Licensed to the public under the agreements of the GNU Lesser General Public
@@ -80,11 +80,11 @@ import org.tquadrat.foundation.mgmt.ManagedObject;
 import org.tquadrat.foundation.stream.MapStream;
 
 /**
- *  This class implements the interface
+ *  <p>{@summary This class implements the interface
  *  {@link JMXSupport}
  *  that in turn extends the definition for a dynamic MBean
- *  ({@link javax.management.DynamicMBean})
- *  and can instrument any object whose class is annotated properly.
+ *  ({@link DynamicMBean})
+ *  and can instrument any object whose class is annotated properly.}</p>
  *
  *  @param  <T> The type of the managed object.
  *
@@ -96,13 +96,13 @@ import org.tquadrat.foundation.stream.MapStream;
  *  @see MBeanSetter
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: JMXSupportImpl.java 1070 2023-09-29 17:09:34Z tquadrat $
+ *  @version $Id: JMXSupportImpl.java 1210 2026-04-26 23:12:25Z tquadrat $
  *  @since 0.0.1
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( "OverlyComplexClass" )
-@ClassVersion( sourceVersion = "$Id: JMXSupportImpl.java 1070 2023-09-29 17:09:34Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: JMXSupportImpl.java 1210 2026-04-26 23:12:25Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.1" )
 public final class JMXSupportImpl<T> implements JMXSupport<T>
 {
@@ -585,7 +585,7 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
         }
 
         //---* Retrieve the attributes value *---------------------------------
-        Object retValue = null;
+        Object retValue;
         try
         {
             retValue = method.invoke( m_Object, (Object []) null );
@@ -635,6 +635,7 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
     /**
      *  {@inheritDoc}
      */
+    @SuppressWarnings( "NewMethodNamingConvention" )
     @Override
     public final long getNextNotificationSequenceNumber() { return m_Sequence.get(); }
 
@@ -668,7 +669,7 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
     @Override
     public final ObjectName getObjectName()
     {
-        ObjectName retValue = null;
+        ObjectName retValue;
 
         //---* Create the return value *---------------------------------------
         try
@@ -690,7 +691,7 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
     @Override
     public final Object invoke( final String actionName, final Object [] params, final String [] signature ) throws MBeanException, ReflectionException
     {
-        Object retValue = null;
+        Object retValue;
 
         //---* Get the method for the action *---------------------------------
         final var method = m_MBeanActions.get( actionName );
@@ -703,9 +704,8 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
             }
             catch( final InvocationTargetException e )
             {
-                final var throwable = e.getCause();
-                final var cause = throwable instanceof Exception ? (Exception) throwable : e;
-                throw new ReflectionException( cause, format( MSG_InvocationProblems, actionName ) );
+                final var exception = e.getCause() instanceof Exception cause ? cause : e;
+                throw new ReflectionException( exception, format( MSG_InvocationProblems, actionName ) );
             }
             catch( final IllegalAccessException e )
             {
@@ -713,6 +713,10 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
             }
             catch( final Exception e )
             {
+                /*
+                 * No further specified exception was thrown. At this location,
+                 * we are unable to perform further analysis of that exception.
+                 */
                 throw new MBeanException( e, format( MSG_InvocationException, actionName ) );
             }
         }
@@ -815,6 +819,7 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
      *
      *  @return The next sequence number.
      */
+    @SuppressWarnings( "NewMethodNamingConvention" )
     private long retrieveNextNotificationSequenceNumber() { return m_Sequence.getAndIncrement(); }
 
     /**

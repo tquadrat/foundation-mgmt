@@ -19,7 +19,7 @@
 /**
  *  The module for the JMX extensions by the <i>Foundation</i> Library.
  *
- *  @version $Id: module-info.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: module-info.java 1206 2026-04-22 19:03:55Z tquadrat $
  *
  *  @todo task.list
  */
@@ -28,6 +28,7 @@ module org.tquadrat.foundation.mgmt
 {
     requires java.base;
     requires java.management;
+    requires java.rmi;
     requires org.tquadrat.foundation.util;
 
     //---* Common Use *--------------------------------------------------------
