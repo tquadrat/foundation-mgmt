@@ -7,7 +7,7 @@
      version='1.1'
      baseProfile='full'
      width='1422.000'
-     height='660.000'>
+     height='682.000'>
     <defs>
         <style><![CDATA[
             line
@@ -118,7 +118,7 @@
         </marker>
         <clipPath id='ID000001'>
             <rect class='focusClass'
-                  height='238.000'
+                  height='260.000'
                   width='1372.000'
                   x='0.000'
                   y='0.000'/>
@@ -130,7 +130,7 @@
                     <rect x='0.000'
                           y='0.000'
                           width='1372.000'
-                          height='238.000'
+                          height='260.000'
                           class='focusClass'/>
                     <line x1='0.000'
                           y1='17.000'
@@ -172,24 +172,30 @@
                           class='static'>+ composeObjectName(domainName:java.lang.String,properties:org.tquadrat.foundation.lang.NameValuePair&lt;java.lang.String&gt;&#x2026;):javax.management.ObjectName</text>
                     <text x='5.000'
                           y='168.000'
-                          class='static'>+ disableRemoteAccess(serviceURL:javax.management.remote.JMXServiceURL):void</text>
+                          class='static'>+ composeServiceURL(registryPort:int):javax.management.remote.JMXServiceURL</text>
                     <text x='5.000'
                           y='179.000'
-                          class='static'>- enableRemoteAccess(mbeanServer:javax.management.MBeanServer,serviceURL:javax.management.remote.JMXServiceURL,registryPortNumber:int,environment:java.util.Map&lt;java.lang.String,?&gt;):void</text>
+                          class='static'>+ composeServiceURL(hostName:java.lang.String,registryPort:int,dataPort:int):javax.management.remote.JMXServiceURL</text>
                     <text x='5.000'
                           y='190.000'
-                          class='static'>+ enableRemoteAccess(mbeanServer:javax.management.MBeanServer,registryPortNumber:int,environment:java.util.Map&lt;java.lang.String,?&gt;):javax.management.remote.JMXServiceURL</text>
+                          class='static'>+ disableRemoteAccess(serviceURL:javax.management.remote.JMXServiceURL):void</text>
                     <text x='5.000'
                           y='201.000'
-                          class='static'>+ enableRemoteAccess(mbeanServer:javax.management.MBeanServer,hostName:java.lang.String,registryPortNumber:int,dataPortNumber:int,environment:java.util.Map&lt;java.lang.String,?&gt;):javax.management.remote.JMXServiceURL</text>
+                          class='static'>- enableRemoteAccess(mbeanServer:javax.management.MBeanServer,serviceURL:javax.management.remote.JMXServiceURL,registryPortNumber:int,environment:java.util.Map&lt;java.lang.String,?&gt;):void</text>
                     <text x='5.000'
                           y='212.000'
-                          class='static'>- startRMIRegistry(port:int):void</text>
+                          class='static'>+ enableRemoteAccess(mbeanServer:javax.management.MBeanServer,registryPortNumber:int,environment:java.util.Map&lt;java.lang.String,?&gt;):javax.management.remote.JMXServiceURL</text>
                     <text x='5.000'
                           y='223.000'
-                          class='static'>- toString(pair:org.tquadrat.foundation.lang.NameValuePair&lt;java.lang.String&gt;):java.lang.String</text>
+                          class='static'>+ enableRemoteAccess(mbeanServer:javax.management.MBeanServer,hostName:java.lang.String,registryPortNumber:int,dataPortNumber:int,environment:java.util.Map&lt;java.lang.String,?&gt;):javax.management.remote.JMXServiceURL</text>
                     <text x='5.000'
                           y='234.000'
+                          class='static'>- startRMIRegistry(port:int):void</text>
+                    <text x='5.000'
+                          y='245.000'
+                          class='static'>- toString(pair:org.tquadrat.foundation.lang.NameValuePair&lt;java.lang.String&gt;):java.lang.String</text>
+                    <text x='5.000'
+                          y='256.000'
                           class='static'>+ unregisterQuietly(mbean:org.tquadrat.foundation.mgmt.JMXSupport&lt;?&gt;):void</text>
                 </g>
             </g>

@@ -59,13 +59,13 @@ import org.tquadrat.foundation.lang.NameValuePair;
  *  This class provides some utilities that are useful in the context of JMX.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: JMXUtils.java 1217 2026-05-02 12:58:09Z tquadrat $
+ *  @version $Id: JMXUtils.java 1229 2026-05-04 19:11:41Z tquadrat $
  *  @since 0.0.1
  *
  *  @UMLGraph.link
  */
 @UtilityClass
-@ClassVersion( sourceVersion = "$Id: JMXUtils.java 1217 2026-05-02 12:58:09Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: JMXUtils.java 1229 2026-05-04 19:11:41Z tquadrat $" )
 @API( status = STABLE, since = "0.0.1" )
 public final class JMXUtils
 {
@@ -208,6 +208,68 @@ public final class JMXUtils
         //---* Done *----------------------------------------------------------
         return retValue;
     }   //  composeObjectName()
+
+    /**
+     *  <p>{@summary Composes an instance of
+     *  {@link JMXServiceURL}
+     *  as ist is needed to expose an MBean server or to connect to an
+     *  exposed MBean server.}</p>
+     *  <p>This version creates a URL that can be used for local connections
+     *  (both processes are running on the same machine).</p>
+     *
+     *  @param  registryPort    The number of the registry port.
+     *  @return The service URL.
+     *
+     *  @see #BIND_NAME
+     *
+     *  @since 0.25.3
+     */
+    @API( status = STABLE, since = "0.25.3" )
+    public static final JMXServiceURL composeServiceURL( final int registryPort )
+    {
+        final JMXServiceURL retValue;
+        try
+        {
+            retValue = new JMXServiceURL( "service:jmx:rmi:///jndi/rmi://localhost:%2$d/%1$s".formatted( BIND_NAME, registryPort ) );
+        }
+        catch( MalformedURLException e )
+        {
+            throw new UnexpectedExceptionError( e );
+        }
+
+        //---* Done *----------------------------------------------------------
+        return retValue;
+    }   //  composeServiceURL()
+
+    /**
+     *  <p>{@summary Composes an instance of
+     *  {@link JMXServiceURL}
+     *  as ist is needed to expose an MBean server or to connect to an
+     *  exposed MBean server.}</p>
+     *  <p>This version creates a URL that can be used for remote connections
+     *  (the processes are running on different machines).</p>
+     *
+     *  @param  hostName    The host name.
+     *  @param  registryPort    The number of the registry port.
+     *  @param  dataPort    The number of the data port; can be the same as the
+     *      registry port.
+     *  @return The service URL.
+     *  @throws MalformedURLException   It is not possible to compose a valid
+     *      {@link JMXServiceURL}
+     *      with the given {@code hostName}.
+     *
+     *  @see #BIND_NAME
+     *
+     *  @since 0.25.3
+     */
+    @API( status = STABLE, since = "0.25.3" )
+    public static final JMXServiceURL composeServiceURL( final String hostName, final int registryPort, final int dataPort ) throws MalformedURLException
+    {
+        final var retValue = new JMXServiceURL( "service:jmx:rmi://%2$s:%4$d/jndi/rmi://%2$s:%3$d/%1$s".formatted( BIND_NAME, requireNotBlankArgument( hostName, "hostName" ), registryPort, dataPort ) );
+
+        //---* Done *----------------------------------------------------------
+        return retValue;
+    }   //  composeServiceURL()
 
     /**
      *  <p>{@summary Disables the external access to the
@@ -364,16 +426,7 @@ public final class JMXUtils
     @API( status = STABLE, since = "0.25.3" )
     public static final JMXServiceURL enableRemoteAccess( final MBeanServer mbeanServer, final int registryPortNumber, final Map<String,?> environment ) throws IllegalStateException, IOException, RemoteException
     {
-        final JMXServiceURL retValue;
-        try
-        {
-            retValue = new JMXServiceURL( "service:jmx:rmi:///jndi/rmi://localhost:%2$d/%1$s".formatted( BIND_NAME, registryPortNumber ) );
-        }
-        catch( MalformedURLException e )
-        {
-            throw new UnexpectedExceptionError( e );
-        }
-
+        final var retValue = composeServiceURL( registryPortNumber );
         enableRemoteAccess( requireNonNullArgument( mbeanServer, "mBeanServer" ), retValue, registryPortNumber, environment );
 
         //---* Done *----------------------------------------------------------
@@ -430,7 +483,7 @@ public final class JMXUtils
     @API( status = STABLE, since = "0.25.3" )
     public static final JMXServiceURL enableRemoteAccess( final MBeanServer mbeanServer, final String hostName, final int registryPortNumber, final int dataPortNumber, Map<String,?> environment ) throws IllegalStateException, IOException, RemoteException
     {
-        final var retValue = new JMXServiceURL( "service:jmx:rmi://%2$s:%4$d/jndi/rmi://%2$s:%3$d/%1$s".formatted( BIND_NAME, requireNotBlankArgument( hostName, "hostName" ), registryPortNumber, dataPortNumber ) );
+        final var retValue = composeServiceURL( hostName, registryPortNumber, dataPortNumber );
         enableRemoteAccess( requireNonNullArgument( mbeanServer, "mBeanServer" ), retValue, registryPortNumber, environment );
 
         //---* Done *----------------------------------------------------------
