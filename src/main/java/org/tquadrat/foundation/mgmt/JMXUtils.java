@@ -59,13 +59,13 @@ import org.tquadrat.foundation.lang.NameValuePair;
  *  This class provides some utilities that are useful in the context of JMX.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: JMXUtils.java 1229 2026-05-04 19:11:41Z tquadrat $
+ *  @version $Id: JMXUtils.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.1
  *
  *  @UMLGraph.link
  */
 @UtilityClass
-@ClassVersion( sourceVersion = "$Id: JMXUtils.java 1229 2026-05-04 19:11:41Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: JMXUtils.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.1" )
 public final class JMXUtils
 {
@@ -159,9 +159,9 @@ public final class JMXUtils
      *  @param  type    The type of the MBean that will be named with the new
      *      object name.
      *  @param  function    The function of the MBean.
-     *  @param  mbeanClass  The MBean's class; can be {@code null}.
+     *  @param  mbeanClass  The MBean's class; can be {@null}.
      *  @param  properties  Additional properties as name-value-pairs; can be
-     *      {@code null}.
+     *      {@null}.
      *  @return The object name.
      *  @throws MalformedObjectNameException    It is not possible to create a
      *      valid object name from the given domain name and properties.
@@ -404,7 +404,7 @@ public final class JMXUtils
      *  @param  environment The configuration settings for the
      *      {@link JMXConnectorServer}
      *      that is used to expose the MBean server. This parameter can be
-     *      {@code null}, although it is recommended to use
+     *      {@null}, although it is recommended to use
      *      {@link Map#of()}
      *      in case no attributes should be provided. The keys in this map must
      *      be Strings. The appropriate type of each associated value depends
@@ -458,7 +458,7 @@ public final class JMXUtils
      *  @param  environment The configuration settings for the
      *      {@link JMXConnectorServer}
      *      that is used to expose the MBean server. This parameter can be
-     *      {@code null}, although it is recommended to use
+     *      {@null}, although it is recommended to use
      *      {@link Map#of()}
      *      in case no attributes should be provided. The keys in this map must
      *      be Strings. The appropriate type of each associated value depends
@@ -542,7 +542,7 @@ public final class JMXUtils
      *  Unregisters the given MBean from the MBeanServer. All exceptions – if
      *  any – will be swallowed silently.
      *
-     *  @param  mbean   The mbean to unregister; may be {@code null}.
+     *  @param  mbean   The mbean to unregister; may be {@null}.
      */
     @API( status = STABLE, since = "0.0.1" )
     public static void unregisterQuietly( final JMXSupport<?> mbean )

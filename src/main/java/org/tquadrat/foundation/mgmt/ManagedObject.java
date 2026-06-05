@@ -35,10 +35,10 @@ import org.tquadrat.foundation.annotation.ClassVersion;
  *  {@link JMXSupport}.
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: ManagedObject.java 995 2022-01-23 01:09:35Z tquadrat $
+ *  @version $Id: ManagedObject.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.1
  */
-@ClassVersion( sourceVersion = "$Id: ManagedObject.java 995 2022-01-23 01:09:35Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: ManagedObject.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.1" )
 @Documented
 @Retention( RetentionPolicy.RUNTIME )
@@ -59,8 +59,8 @@ public @interface ManagedObject
     /**
      *  The instrumented object will send notifications.
      *
-     *  @return {@code true} if the instrumented object will send
-     *      notifications, {@code false} (the default) otherwise.
+     *  @return {@true} if the instrumented object will send
+     *      notifications, {@false} (the default) otherwise.
      */
     boolean useNotifications() default false;
 }

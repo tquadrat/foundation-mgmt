@@ -72,13 +72,13 @@
 <span class="source-line-no">059</span><span id="line-59"> *  This class provides some utilities that are useful in the context of JMX.</span>
 <span class="source-line-no">060</span><span id="line-60"> *</span>
 <span class="source-line-no">061</span><span id="line-61"> *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org</span>
-<span class="source-line-no">062</span><span id="line-62"> *  @version $Id: JMXUtils.java 1229 2026-05-04 19:11:41Z tquadrat $</span>
+<span class="source-line-no">062</span><span id="line-62"> *  @version $Id: JMXUtils.java 1258 2026-06-04 18:33:06Z tquadrat $</span>
 <span class="source-line-no">063</span><span id="line-63"> *  @since 0.0.1</span>
 <span class="source-line-no">064</span><span id="line-64"> *</span>
 <span class="source-line-no">065</span><span id="line-65"> *  @UMLGraph.link</span>
 <span class="source-line-no">066</span><span id="line-66"> */</span>
 <span class="source-line-no">067</span><span id="line-67">@UtilityClass</span>
-<span class="source-line-no">068</span><span id="line-68">@ClassVersion( sourceVersion = "$Id: JMXUtils.java 1229 2026-05-04 19:11:41Z tquadrat $" )</span>
+<span class="source-line-no">068</span><span id="line-68">@ClassVersion( sourceVersion = "$Id: JMXUtils.java 1258 2026-06-04 18:33:06Z tquadrat $" )</span>
 <span class="source-line-no">069</span><span id="line-69">@API( status = STABLE, since = "0.0.1" )</span>
 <span class="source-line-no">070</span><span id="line-70">public final class JMXUtils</span>
 <span class="source-line-no">071</span><span id="line-71">{</span>
@@ -172,9 +172,9 @@
 <span class="source-line-no">159</span><span id="line-159">     *  @param  type    The type of the MBean that will be named with the new</span>
 <span class="source-line-no">160</span><span id="line-160">     *      object name.</span>
 <span class="source-line-no">161</span><span id="line-161">     *  @param  function    The function of the MBean.</span>
-<span class="source-line-no">162</span><span id="line-162">     *  @param  mbeanClass  The MBean's class; can be {@code null}.</span>
+<span class="source-line-no">162</span><span id="line-162">     *  @param  mbeanClass  The MBean's class; can be {@null}.</span>
 <span class="source-line-no">163</span><span id="line-163">     *  @param  properties  Additional properties as name-value-pairs; can be</span>
-<span class="source-line-no">164</span><span id="line-164">     *      {@code null}.</span>
+<span class="source-line-no">164</span><span id="line-164">     *      {@null}.</span>
 <span class="source-line-no">165</span><span id="line-165">     *  @return The object name.</span>
 <span class="source-line-no">166</span><span id="line-166">     *  @throws MalformedObjectNameException    It is not possible to create a</span>
 <span class="source-line-no">167</span><span id="line-167">     *      valid object name from the given domain name and properties.</span>
@@ -417,7 +417,7 @@
 <span class="source-line-no">404</span><span id="line-404">     *  @param  environment The configuration settings for the</span>
 <span class="source-line-no">405</span><span id="line-405">     *      {@link JMXConnectorServer}</span>
 <span class="source-line-no">406</span><span id="line-406">     *      that is used to expose the MBean server. This parameter can be</span>
-<span class="source-line-no">407</span><span id="line-407">     *      {@code null}, although it is recommended to use</span>
+<span class="source-line-no">407</span><span id="line-407">     *      {@null}, although it is recommended to use</span>
 <span class="source-line-no">408</span><span id="line-408">     *      {@link Map#of()}</span>
 <span class="source-line-no">409</span><span id="line-409">     *      in case no attributes should be provided. The keys in this map must</span>
 <span class="source-line-no">410</span><span id="line-410">     *      be Strings. The appropriate type of each associated value depends</span>
@@ -471,7 +471,7 @@
 <span class="source-line-no">458</span><span id="line-458">     *  @param  environment The configuration settings for the</span>
 <span class="source-line-no">459</span><span id="line-459">     *      {@link JMXConnectorServer}</span>
 <span class="source-line-no">460</span><span id="line-460">     *      that is used to expose the MBean server. This parameter can be</span>
-<span class="source-line-no">461</span><span id="line-461">     *      {@code null}, although it is recommended to use</span>
+<span class="source-line-no">461</span><span id="line-461">     *      {@null}, although it is recommended to use</span>
 <span class="source-line-no">462</span><span id="line-462">     *      {@link Map#of()}</span>
 <span class="source-line-no">463</span><span id="line-463">     *      in case no attributes should be provided. The keys in this map must</span>
 <span class="source-line-no">464</span><span id="line-464">     *      be Strings. The appropriate type of each associated value depends</span>
@@ -555,7 +555,7 @@
 <span class="source-line-no">542</span><span id="line-542">     *  Unregisters the given MBean from the MBeanServer. All exceptions – if</span>
 <span class="source-line-no">543</span><span id="line-543">     *  any – will be swallowed silently.</span>
 <span class="source-line-no">544</span><span id="line-544">     *</span>
-<span class="source-line-no">545</span><span id="line-545">     *  @param  mbean   The mbean to unregister; may be {@code null}.</span>
+<span class="source-line-no">545</span><span id="line-545">     *  @param  mbean   The mbean to unregister; may be {@null}.</span>
 <span class="source-line-no">546</span><span id="line-546">     */</span>
 <span class="source-line-no">547</span><span id="line-547">    @API( status = STABLE, since = "0.0.1" )</span>
 <span class="source-line-no">548</span><span id="line-548">    public static void unregisterQuietly( final JMXSupport&lt;?&gt; mbean )</span>

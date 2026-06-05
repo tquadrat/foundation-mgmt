@@ -96,13 +96,13 @@ import org.tquadrat.foundation.stream.MapStream;
  *  @see MBeanSetter
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: JMXSupportImpl.java 1210 2026-04-26 23:12:25Z tquadrat $
+ *  @version $Id: JMXSupportImpl.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.1
  *
  *  @UMLGraph.link
  */
 @SuppressWarnings( "OverlyComplexClass" )
-@ClassVersion( sourceVersion = "$Id: JMXSupportImpl.java 1210 2026-04-26 23:12:25Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: JMXSupportImpl.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = INTERNAL, since = "0.0.1" )
 public final class JMXSupportImpl<T> implements JMXSupport<T>
 {
@@ -235,11 +235,11 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
      *  @param  object  The object to register with the JMX agent.
      *  @param  name  The object name for the MBean.
      *  @param  description The description for the MBean.
-     *  @param  useNotifications    {@code true} if the instrumented object
-     *      will send notifications, {@code false} (the default) otherwise.
+     *  @param  useNotifications    {@true} if the instrumented object
+     *      will send notifications, {@false} (the default) otherwise.
      *  @param  threadFactory   The thread factory that is used when
-     *      notifications will be emitted asynchronously; can be {@code null}
-     *      and will be ignored if {@code useNotifications} is {@code false}.
+     *      notifications will be emitted asynchronously; can be {@null}
+     *      and will be ignored if {@code useNotifications} is {@false}.
      */
     @SuppressWarnings( "OverlyComplexMethod" )
     private JMXSupportImpl( final T object, final ObjectName name, final String description, final boolean useNotifications, final ThreadFactory threadFactory )
@@ -761,7 +761,7 @@ public final class JMXSupportImpl<T> implements JMXSupport<T>
      *  @param  objectName  The object name that is used for the object to
      *      register.
      *  @param  threadFactory   The thread factory that is used when
-     *      notifications should be sent asynchronously; can be {@code null}.
+     *      notifications should be sent asynchronously; can be {@null}.
      *  @return The MBean object that was generated as the instrumentation for
      *      the object to manage.
      *  @throws IllegalArgumentException    The object is not annotated with

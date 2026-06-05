@@ -46,12 +46,12 @@ import org.tquadrat.foundation.mgmt.internal.JMXSupportImpl;
  *  @see org.tquadrat.foundation.mgmt.MBeanSetter
  *
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
- *  @version $Id: JMXSupport.java 1210 2026-04-26 23:12:25Z tquadrat $
+ *  @version $Id: JMXSupport.java 1258 2026-06-04 18:33:06Z tquadrat $
  *  @since 0.0.1
  *
  *  @UMLGraph.link
  */
-@ClassVersion( sourceVersion = "$Id: JMXSupport.java 1210 2026-04-26 23:12:25Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: JMXSupport.java 1258 2026-06-04 18:33:06Z tquadrat $" )
 @API( status = STABLE, since = "0.0.1" )
 public sealed interface JMXSupport<T> extends DynamicMBean, NotificationEmitter
     permits org.tquadrat.foundation.mgmt.internal.JMXSupportImpl
@@ -101,7 +101,7 @@ public sealed interface JMXSupport<T> extends DynamicMBean, NotificationEmitter
      *  @param  objectName  The object name that is used for the object to
      *      register.
      *  @param  threadFactory   The thread factory that is used when
-     *      notifications should be sent asynchronously; can be {@code null}.
+     *      notifications should be sent asynchronously; can be {@null}.
      *  @return The MBean object that was generated as the instrumentation for
      *      the object to manage.
      *  @throws IllegalArgumentException    The object is not annotated with
