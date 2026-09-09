@@ -10,4 +10,4 @@ Some extensions and utilities for JMX.
     </dependency>
     ```
 ---  
-Last updated: 2026-06-05T23:00:10.745821319+02:00[Europe/Berlin]
+Last updated: 2026-09-09T11:37:15.161731675+02:00[Europe/Berlin]
