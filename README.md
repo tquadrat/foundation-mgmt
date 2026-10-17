@@ -6,8 +6,8 @@ Some extensions and utilities for JMX.
     <dependency>
       <groupId>org.tquadrat.library</groupId>
       <artifactId>org.tquadrat.foundation.mgmt</artifactId>
-      <version>0.25.13</version>
+      <version>0.25.14</version>
     </dependency>
     ```
 ---  
-Last updated: 2026-10-16T14:31:03.852481529+02:00[Europe/Berlin]
+Last updated: 2026-10-17T17:21:26.402816784+02:00[Europe/Berlin]
