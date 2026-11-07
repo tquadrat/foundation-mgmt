@@ -65,7 +65,7 @@
 <span class="source-line-no">052</span><span id="line-52">import org.tquadrat.foundation.annotation.ClassVersion;</span>
 <span class="source-line-no">053</span><span id="line-53">import org.tquadrat.foundation.annotation.UtilityClass;</span>
 <span class="source-line-no">054</span><span id="line-54">import org.tquadrat.foundation.exception.PrivateConstructorForStaticClassCalledError;</span>
-<span class="source-line-no">055</span><span id="line-55">import org.tquadrat.foundation.exception.UnexpectedExceptionError;</span>
+<span class="source-line-no">055</span><span id="line-55">import org.tquadrat.foundation.exception.UnlikelyExceptionError;</span>
 <span class="source-line-no">056</span><span id="line-56">import org.tquadrat.foundation.lang.NameValuePair;</span>
 <span class="source-line-no">057</span><span id="line-57"></span>
 <span class="source-line-no">058</span><span id="line-58">/**</span>
@@ -149,7 +149,7 @@
 <span class="source-line-no">136</span><span id="line-136">    ====** Constructors **=====================================================</span>
 <span class="source-line-no">137</span><span id="line-137">        \*--------------*/</span>
 <span class="source-line-no">138</span><span id="line-138">    /**</span>
-<span class="source-line-no">139</span><span id="line-139">     *  No instance allowed for this class.</span>
+<span class="source-line-no">139</span><span id="line-139">     *  &lt;p&gt;{@summary {@noInstance}}&lt;/p&gt;</span>
 <span class="source-line-no">140</span><span id="line-140">     */</span>
 <span class="source-line-no">141</span><span id="line-141">    private JMXUtils() { throw new PrivateConstructorForStaticClassCalledError( JMXUtils.class ); }</span>
 <span class="source-line-no">142</span><span id="line-142"></span>
@@ -247,7 +247,7 @@
 <span class="source-line-no">234</span><span id="line-234">        }</span>
 <span class="source-line-no">235</span><span id="line-235">        catch( MalformedURLException e )</span>
 <span class="source-line-no">236</span><span id="line-236">        {</span>
-<span class="source-line-no">237</span><span id="line-237">            throw new UnexpectedExceptionError( e );</span>
+<span class="source-line-no">237</span><span id="line-237">            throw new UnlikelyExceptionError( e );</span>
 <span class="source-line-no">238</span><span id="line-238">        }</span>
 <span class="source-line-no">239</span><span id="line-239"></span>
 <span class="source-line-no">240</span><span id="line-240">        //---* Done *----------------------------------------------------------</span>

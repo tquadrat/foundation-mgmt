@@ -52,7 +52,7 @@ import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
 import org.tquadrat.foundation.annotation.UtilityClass;
 import org.tquadrat.foundation.exception.PrivateConstructorForStaticClassCalledError;
-import org.tquadrat.foundation.exception.UnexpectedExceptionError;
+import org.tquadrat.foundation.exception.UnlikelyExceptionError;
 import org.tquadrat.foundation.lang.NameValuePair;
 
 /**
@@ -136,7 +136,7 @@ public final class JMXUtils
     ====** Constructors **=====================================================
         \*--------------*/
     /**
-     *  No instance allowed for this class.
+     *  <p>{@summary {@noInstance}}</p>
      */
     private JMXUtils() { throw new PrivateConstructorForStaticClassCalledError( JMXUtils.class ); }
 
@@ -234,7 +234,7 @@ public final class JMXUtils
         }
         catch( MalformedURLException e )
         {
-            throw new UnexpectedExceptionError( e );
+            throw new UnlikelyExceptionError( e );
         }
 
         //---* Done *----------------------------------------------------------
